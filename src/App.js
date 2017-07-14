@@ -6,16 +6,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        
       </div>
     );
   }
 }
+
+var TOPICS = [
+  { topic: 'Tab 1', 
+    content: "Gochujang kombucha mixtape heirloom fashion axe tofu. Ennui copper mug ethical hammock literally cloud bread, four dollar toast schlitz. Literally leggings live-edge neutra.  Shoreditch post-ironic fashion axe adaptogen aesthetic retro mlkshk echo park ennui. Snackwave lyft dreamcatcher, aesthetic activated charcoal vice lomo disrupt art party.", 
+    url: 'https://media.giphy.com/media/l0HlFFTVOQz0bKYJG/giphy.gif'
+  }
+]
 
 export default App;
