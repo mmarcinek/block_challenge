@@ -15,14 +15,14 @@ class Content extends Component{
   constructor(props) {
     super(props);
     this.state = {
-      value: 'a',
+      value: 0,
     };
   }
     
 
   handleChange(value){
     this.setState({
-      value: value,
+      value: this.state.value,
     });
   };
 
@@ -32,9 +32,8 @@ class Content extends Component{
         value={this.state.value}
         onChange={this.handleChange}
       >
-        <Tab label={this.props.topic} value={this.props.topic}>
+        <Tab label={this.props.topic} value={this.state.value}>
           <div>
-            <h2 style={styles.headline}>{this.props.topic}</h2>
             <p>
               {this.props.content}
             </p>
