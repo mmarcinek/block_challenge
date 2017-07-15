@@ -1,18 +1,37 @@
 import React, { Component } from 'react';
-import Content from './Content'
+import {Tabs, Tab} from 'material-ui/Tabs';
 import './BlockItem.css';
 
 
 class BlockItem extends Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: 1,
+    };
+  }
+
+  handleChange(value){
+    this.setState({
+      value: value,
+    });
+  };
+
   renderBlockItem(){    
     return(
       this.props.items.map(item =>(
-        <Content
-          key={item.topic}
-          topic={item.topic}
-          content ={item.content}
-          url = {item.url}
-        />
+        <Tabs
+          value={this.state.value}
+          onChange={this.handleChange = this.handleChange.bind(this)}
+        >
+          <Tab label={item.topic} value={item.id}>
+            <div>  
+              <p>
+                {item.content}
+              </p>
+            </div>
+          </Tab>
+        </Tabs>
       ))
     );
   }
