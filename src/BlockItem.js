@@ -20,10 +20,11 @@ class BlockItem extends Component{
   renderBlockItem(){    
     return(
       this.props.items.map(item =>(
-        <Tabs value={this.state.value} onChange={this.handleChange = this.handleChange.bind(this)}>
-          <Tab label={item.topic} value={item.id}>
-            <div>  
-              {item.content} 
+        <Tabs key={item.id} value={this.state.value} onChange={this.handleChange = this.handleChange.bind(this)}>
+          <Tab buttonStyle={{flexDirection:'row'}} className="tabs-container" label={item.topic} value={item.id}>
+            <div className="tabs-content">
+              <p>{item.content}</p>
+              <img src={item.url} alt=''/>
             </div>
           </Tab>
         </Tabs>
