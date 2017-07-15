@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import Tabs from './Tabs';
+import BlockItem from './BlockItem';
 import './App.css';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 
 class App extends Component {
-  constructor(props){
-    super(props)
-    this.state = {items: []};
-  }
-  
   render() {
     var ITEMS = [
       { topic: 'Tab 1', 
@@ -33,9 +30,11 @@ class App extends Component {
     ]
 
     return (
-      <div className="App">
-        <Tabs items={ITEMS} />
-      </div>
+      <MuiThemeProvider>
+        <div className="App">
+          <BlockItem items={ITEMS} />
+        </div>
+      </MuiThemeProvider>
     );
   }
 }

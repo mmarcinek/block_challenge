@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import Content from './Content'
-import './Tabs.css';
+import './BlockItem.css';
 
 
-class Tabs extends Component{
-  constructor(props){
-    super(props);
-  }
-
-  renderTabs(){    
+class BlockItem extends Component{
+  renderBlockItem(){    
     return(
       this.props.items.map(item =>(
         <Content
@@ -23,10 +19,10 @@ class Tabs extends Component{
 
   render(){
     return(
-      <div className="Tabs">
-        {this.renderTabs()}
+      <div className="BlockItem">
+        {this.renderBlockItem()}
       </div>
     )
   }
 }
-export default Tabs;
+export default BlockItem;
