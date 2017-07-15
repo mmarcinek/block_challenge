@@ -7,7 +7,7 @@ class BlockItem extends Component{
   constructor(props) {
     super(props);
     this.state = {
-      value: 1,
+      value: props.items[0].id,
     };
   }
 
@@ -20,15 +20,10 @@ class BlockItem extends Component{
   renderBlockItem(){    
     return(
       this.props.items.map(item =>(
-        <Tabs
-          value={this.state.value}
-          onChange={this.handleChange = this.handleChange.bind(this)}
-        >
+        <Tabs value={this.state.value} onChange={this.handleChange = this.handleChange.bind(this)}>
           <Tab label={item.topic} value={item.id}>
             <div>  
-              <p>
-                {item.content}
-              </p>
+              {item.content} 
             </div>
           </Tab>
         </Tabs>
