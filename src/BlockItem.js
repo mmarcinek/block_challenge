@@ -2,26 +2,31 @@ import React, { Component } from 'react';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import './BlockItem.css';
 
-
 class BlockItem extends Component{
   constructor(props) {
     super(props);
     this.state = {
       value: props.items[0].id,
+      isActive: " tabs-inactive"
     };
   }
 
   handleChange(value){
     this.setState({
       value: value,
+      isActive: ' tabs-active'
     });
   };
 
-  renderBlockItem(){    
+  renderBlockItem(){  
     return(
       this.props.items.map(item =>(
-        <Tabs key={item.id} value={this.state.value} onChange={this.handleChange = this.handleChange.bind(this)}>
-          <Tab buttonStyle={{flexDirection:'row'}} className="tabs-container" label={item.topic} value={item.id}>
+        <Tabs key={item.id} 
+              value={this.state.value}
+              onChange={this.handleChange = this.handleChange.bind(this)}>
+          <Tab className={"tabs-container" + this.state.isActive} 
+              label={item.topic} 
+              value={item.id}>
             <div className="tabs-content">
               <p>{item.content}</p>
               <img src={item.url} alt=''/>
@@ -41,3 +46,5 @@ class BlockItem extends Component{
   }
 }
 export default BlockItem;
+
+// buttonStyle={{flexDirection:'row wrap'}}

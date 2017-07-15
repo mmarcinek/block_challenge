@@ -1,14 +1,20 @@
-.tabs-container {
+ .tabs-container {
   font-family: 'Lato', sans-serif !important;
   font-weight: 300 !important;
   font-size: 14px !important;
-  color: #747a7e !important;  
-  background-color: #fff !important;
-  border-radius: 0px !important;
-  /* border-left: 1px solid #DDDDDD !important;  */
-  /* border-right: 1px solid #DDDDDD !important;          */
+  border-radius: 0px !important;         
   border-bottom: 1px solid transparent !important;
-} 
+}  
+
+ .tabs-active {
+  color: #747a7e ! !important;  
+  background-color: #efefef !important;
+}  
+
+.tabs-inactive {
+  color: #313537 !important;  
+  background-color: #F5F5F5 !important;
+}
 
 .tabs-content{
   font-family: 'Merriweather', serif;
