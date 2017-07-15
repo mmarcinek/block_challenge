@@ -14,15 +14,16 @@ const styles = {
 class Content extends Component{
   constructor(props) {
     super(props);
+    console.log(props)
     this.state = {
-      value: 0,
+      value: [0],
     };
   }
     
 
   handleChange(value){
     this.setState({
-      value: this.state.value,
+      value: value,
     });
   };
 
@@ -30,9 +31,9 @@ class Content extends Component{
     return (
       <Tabs
         value={this.state.value}
-        onChange={this.handleChange}
+        onChange={this.handleChange = this.handleChange.bind(this)}
       >
-        <Tab label={this.props.topic} value={this.state.value}>
+        <Tab label={this.props.topic} value={this.props.topic}>
           <div>
             <p>
               {this.props.content}
