@@ -27,7 +27,7 @@ class BlockItem extends Component{
   renderBlockItem(){  
     return(
       this.props.items.map(item =>(
-        <Tabs key={item.id} 
+        <Tabs tabItemContainerStyle={{display:'flex'}} key={item.id} 
               value={this.state.value}
               onChange={this.handleChange = this.handleChange.bind(this)}>
           <Tab buttonStyle={{flexDirection:'row'}} className={"tabs-container" + (this.state.value === item.id ? ' tabs-active' : ' tabs-inactive')} 
