@@ -7,14 +7,12 @@ class BlockItem extends Component{
     super(props);
     this.state = {
       value: props.items[0].id,
-      isActive: " tabs-inactive"
     };
   }
 
   handleChange(value){
     this.setState({
       value: value,
-      isActive: ' tabs-active'
     });
   };
 
@@ -24,7 +22,7 @@ class BlockItem extends Component{
         <Tabs key={item.id} 
               value={this.state.value}
               onChange={this.handleChange = this.handleChange.bind(this)}>
-          <Tab className={"tabs-container" + this.state.isActive} 
+          <Tab className={"tabs-container" + (this.state.value === item.id ? ' tabs-active' : ' tabs-inactive')} 
               label={item.topic} 
               value={item.id}>
             <div className="tabs-content">
