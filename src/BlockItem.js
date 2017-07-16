@@ -35,7 +35,7 @@ class BlockItem extends Component{
                value={item.id}>
             <div className="tabs-content">
               {(Array.isArray(item.content) ? this.contentArray(item.content) : item.content)}      
-              <img src={item.url} alt=''/>
+              <img className="content-image" src={item.url} alt=''/>
             </div>
           </Tab>
         </Tabs>

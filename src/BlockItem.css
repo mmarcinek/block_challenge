@@ -26,3 +26,9 @@
   font-size: 15px;
   letter-spacing: .02em;
 }
+
+.content-image{
+  margin-top: 25px;
+  max-width: 100%;
+  height: auto;
+}
