@@ -23,8 +23,8 @@ class BlockItem extends Component{
               value={this.state.value}
               onChange={this.handleChange = this.handleChange.bind(this)}>
           <Tab className={"tabs-container" + (this.state.value === item.id ? ' tabs-active' : ' tabs-inactive')} 
-              label={item.topic} 
-              value={item.id}>
+               label={item.topic} 
+               value={item.id}>
             <div className="tabs-content">
               <p>{item.content}</p>
               <img src={item.url} alt=''/>
