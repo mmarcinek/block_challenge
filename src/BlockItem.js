@@ -16,17 +16,25 @@ class BlockItem extends Component{
     });
   };
 
+  contentArray(contents){
+    return(
+      contents.map(content => (
+        <p key={content}>{content}</p>
+      ))
+    ) 
+  }
+
   renderBlockItem(){  
     return(
       this.props.items.map(item =>(
         <Tabs key={item.id} 
               value={this.state.value}
               onChange={this.handleChange = this.handleChange.bind(this)}>
-          <Tab className={"tabs-container" + (this.state.value === item.id ? ' tabs-active' : ' tabs-inactive')} 
+          <Tab buttonStyle={{flexDirection:'row'}} className={"tabs-container" + (this.state.value === item.id ? ' tabs-active' : ' tabs-inactive')} 
                label={item.topic} 
                value={item.id}>
             <div className="tabs-content">
-              <p>{item.content}</p>
+              {(Array.isArray(item.content) ? this.contentArray(item.content) : item.content)}      
               <img src={item.url} alt=''/>
             </div>
           </Tab>
@@ -44,5 +52,3 @@ class BlockItem extends Component{
   }
 }
 export default BlockItem;
-
-// buttonStyle={{flexDirection:'row wrap'}}

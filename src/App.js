@@ -14,7 +14,10 @@ class App extends Component {
       },
       { id: 2,
         topic: 'Gaining Insight', 
-        content: "Gochujang kombucha mixtape heirloom fashion axe tofu. Ennui copper mug ethical hammock literally cloud bread, four dollar toast schlitz. Literally leggings live-edge neutra.  Shoreditch post-ironic fashion axe adaptogen aesthetic retro mlkshk echo park ennui. Snackwave lyft dreamcatcher, aesthetic activated charcoal vice lomo disrupt art party.", 
+        content: ["Gochujang kombucha mixtape heirloom fashion axe tofu. Ennui copper mug ethical hammock literally cloud bread, four dollar toast schlitz. Literally leggings live-edge neutra.  Shoreditch post-ironic fashion axe adaptogen aesthetic retro mlkshk echo park ennui. Snackwave lyft dreamcatcher, aesthetic activated charcoal vice lomo disrupt art party.",
+          "Here is a second paragraph that has its own value. Although we should probably consider mapping key values instead",
+          "But, I can add a third and as long as the content is unique it will create a new node."
+        ], 
         url: ''
       },
       { id: 3,
