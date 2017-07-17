@@ -6,7 +6,7 @@
 }
    
 .BlockItem {
-   display: flex !important; 
+  display: flex !important; 
   overflow: hidden;
 }   
 

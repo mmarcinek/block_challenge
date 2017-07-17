@@ -27,16 +27,18 @@ class BlockItem extends Component{
   renderBlockItem(){  
     return(
       this.props.items.map(item =>(
-        <Tabs tabItemContainerStyle={{display: 'flex', whiteSpace: 'wrap'}} key={item.id} 
+        <Tabs key={item.id} 
               value={this.state.value}
               onChange={this.handleChange = this.handleChange.bind(this)}>
           <Tab buttonStyle={{flexDirection:'row'}} className={"tabs-container" + (this.state.value === item.id ? ' tabs-active' : ' tabs-inactive')} 
                label={item.topic} 
                value={item.id}>
-            <div className="tabs-content">
-              {(Array.isArray(item.content) ? this.contentArray(item.content) : item.content)}      
-              <img className="content-image" src={item.url} alt=''/>
-            </div> 
+            {(this.state.value === item.id ? 
+              <div className="tabs-content">
+                {(Array.isArray(item.content) ? this.contentArray(item.content) : item.content)}      
+                <img className="content-image" src={item.url} alt=''/>
+              </div> : <div style={{display:"none"}}></div>
+            )}
           </Tab>
         </Tabs>
       ))
