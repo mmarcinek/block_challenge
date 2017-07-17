@@ -25,7 +25,7 @@ class App extends Component {
       { id: 3,
         topic: 'Making it Real', 
         content: ["So, yes, I love to write code! I find programming to be challenging, fun, and greatly rewarding!",
-        "I am also a visual artist, and that is what I primarily studied in college. I really love photography, film(as in motion pictures, and yes, I still shoot film for stills as well as digital!), and printmaking. I like objects that are reproducable, I guess that is why I like programming too.",
+        "I am also a visual artist, and that is what I studied in college. I really love photography, film(as in motion pictures, and yes, I still shoot film for stills as well as digital!), and printmaking. I like objects that are reproducable, I guess that is why I like programming too.",
         "Most of my subject matter is related to the landscape and are serial documentary images. Here is an image from Boomtown, Pinedale Wyoming:"
         ], 
         url: 'http://payload201.cargocollective.com/1/11/363447/6328729/boomtown%202%20small.jpg'
