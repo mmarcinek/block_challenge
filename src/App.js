@@ -10,7 +10,7 @@ class App extends Component {
       { id: 1,
         topic: 'Embracing Discovery', 
         content: ["Wow, I am definitely a React.js convert! Honestly, this is the first project I have built in React(outside of some really interesting reading) and it was quite a joy to experience.",
-        "I feel like this gif accurately describes how I would visualize how React Components can import and extend state and props from related components:"],
+        "I feel like this gif accurately describes how I data moves through React via importing and extension of state and props from related components:"],
         url: 'https://media.giphy.com/media/l0HlFFTVOQz0bKYJG/giphy.gif'
       },
       { id: 2,
