@@ -22,7 +22,8 @@ class App extends Component {
       },
       { id: 3,
         topic: 'Making it Real', 
-        content: "Gochujang kombucha mixtape heirloom fashion axe tofu. Ennui copper mug ethical hammock literally cloud bread, four dollar toast schlitz. Literally leggings live-edge neutra.  Shoreditch post-ironic fashion axe adaptogen aesthetic retro mlkshk echo park ennui. Snackwave lyft dreamcatcher, aesthetic activated charcoal vice lomo disrupt art party.", 
+        content: ["Gochujang kombucha mixtape heirloom fashion axe tofu. Ennui copper mug ethical hammock literally cloud bread, four dollar toast schlitz. Literally leggings live-edge neutra.  Shoreditch post-ironic fashion axe adaptogen aesthetic retro mlkshk echo park ennui. Snackwave lyft dreamcatcher, aesthetic activated charcoal vice lomo disrupt art party.",
+        "This is my second paragraph on tab 3, which will automatically fit into the page."], 
         url: 'https://media.giphy.com/media/l0HlFFTVOQz0bKYJG/giphy.gif'
       },
       { id: 4,
