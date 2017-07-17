@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Tabs, Tab} from 'material-ui/Tabs';
+import {Tabs, Tab} from 'material-ui-scrollable-tabs/Tabs';
 import './BlockItem.css';
 
 class BlockItem extends Component{
@@ -26,10 +26,11 @@ class BlockItem extends Component{
 
   render(){
     return(
-      <Tabs
-        value={this.state.value}
-        onChange={this.handleChange = this.handleChange.bind(this)}
-      >
+        <Tabs
+          tabType={'scrollable-buttons'}
+          value={this.state.value}
+          onChange={this.handleChange = this.handleChange.bind(this)}
+        >
         <Tab className={"tabs-container" + (this.state.value === this.props.items[0].id? ' tabs-active' : ' tabs-inactive')}
              label={this.props.items[0].topic} 
              value={this.props.items[0].id}>
@@ -75,3 +76,8 @@ class BlockItem extends Component{
   }
 }
 export default BlockItem;
+
+
+<div className="nav-tabs">
+
+</div>
