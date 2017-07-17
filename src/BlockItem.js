@@ -6,13 +6,13 @@ class BlockItem extends Component{
   constructor(props) {
     super(props);
     this.state = {
-      value: props.items[0].id,
+      value: 0,
     };
   }
 
   handleChange(value){
     this.setState({
-      value: value,
+      value: value.props.index,
     });
   };
 
@@ -25,49 +25,56 @@ class BlockItem extends Component{
   }
 
   render(){
-    console.log(this.state.value)
     return(
         <Tabs
           className="scroll-tab"
           tabType={'scrollable-buttons'}
           value={this.state.value}
-          onChange={this.handleChange = this.handleChange.bind(this)}
         >
-        <Tab className={"tabs-container" + (this.state.value === this.props.items[0].id ? ' tabs-active' : ' tabs-inactive')}
+        <Tab className={"tabs-container" + (this.state.value === 0 ? ' tabs-active' : ' tabs-inactive')}
              label={this.props.items[0].topic} 
-             value={this.props.items[0].id}>
+             onActive={this.handleChange = this.handleChange.bind(this)}
+             >
           <div className="tabs-content">
             {(Array.isArray(this.props.items[0].content) ? this.contentArray(this.props.items[0].content) : this.props.items[0].content)}      
             <img className="content-image" src={this.props.items[0].url} alt=''/>
           </div> 
         </Tab>
-        <Tab className={"tabs-container" + (this.state.value === this.props.items[1].id ? ' tabs-active' : ' tabs-inactive')}
+        <Tab className={"tabs-container" + (this.state.value === 1 ? ' tabs-active' : ' tabs-inactive')}
              label={this.props.items[1].topic} 
-             value={this.props.items[1].id}>
+             value={this.props.items[1].id}
+             onActive={this.handleChange = this.handleChange.bind(this)}
+             >
           <div className="tabs-content">
             {(Array.isArray(this.props.items[1].content) ? this.contentArray(this.props.items[1].content) : this.props.items[1].content)}      
             <img className="content-image" src={this.props.items[1].url} alt=''/>
           </div> 
         </Tab>
-        <Tab className={"tabs-container" + (this.state.value === this.props.items[2].id ? ' tabs-active' : ' tabs-inactive')}
+        <Tab className={"tabs-container" + (this.state.value === 2 ? ' tabs-active' : ' tabs-inactive')}
              label={this.props.items[2].topic} 
-             value={this.props.items[2].id}>
+             value={this.props.items[2].id}
+             onActive={this.handleChange = this.handleChange.bind(this)}
+             >
           <div className="tabs-content">
             {(Array.isArray(this.props.items[2].content) ? this.contentArray(this.props.items[2].content) : this.props.items[2].content)}      
             <img className="content-image" src={this.props.items[2].url} alt=''/>
           </div> 
         </Tab>
-        <Tab className={"tabs-container" + (this.state.value === this.props.items[3].id ? ' tabs-active' : ' tabs-inactive')} 
+        <Tab className={"tabs-container" + (this.state.value === 3 ? ' tabs-active' : ' tabs-inactive')} 
              label={this.props.items[3].topic} 
-             value={this.props.items[3].id}>
+             value={this.props.items[3].id}
+             onActive={this.handleChange = this.handleChange.bind(this)}
+             >
           <div className="tabs-content">
             {(Array.isArray(this.props.items[3].content) ? this.contentArray(this.props.items[3].content) : this.props.items[3].content)}      
             <img className="content-image" src={this.props.items[3].url} alt=''/>
           </div> 
         </Tab>
-        <Tab className={"tabs-container" + (this.state.value === this.props.items[4].id ? ' tabs-active' : ' tabs-inactive')}
+        <Tab className={"tabs-container" + (this.state.value === 4 ? ' tabs-active' : ' tabs-inactive')}
              label={this.props.items[4].topic} 
-             value={this.props.items[4].id}>
+             value={this.props.items[4].id}
+             onActive={this.handleChange = this.handleChange.bind(this)}
+             >
           <div className="tabs-content">
             {(Array.isArray(this.props.items[4].content) ? this.contentArray(this.props.items[4].content) : this.props.items[4].content)}      
             <img className="content-image" src={this.props.items[4].url} alt=''/>
@@ -78,8 +85,3 @@ class BlockItem extends Component{
   }
 }
 export default BlockItem;
-
-
-<div className="nav-tabs">
-
-</div>
