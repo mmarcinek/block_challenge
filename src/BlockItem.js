@@ -25,13 +25,15 @@ class BlockItem extends Component{
   }
 
   render(){
+    console.log(this.state.value)
     return(
         <Tabs
+          className="scroll-tab"
           tabType={'scrollable-buttons'}
           value={this.state.value}
           onChange={this.handleChange = this.handleChange.bind(this)}
         >
-        <Tab className={"tabs-container" + (this.state.value === this.props.items[0].id? ' tabs-active' : ' tabs-inactive')}
+        <Tab className={"tabs-container" + (this.state.value === this.props.items[0].id ? ' tabs-active' : ' tabs-inactive')}
              label={this.props.items[0].topic} 
              value={this.props.items[0].id}>
           <div className="tabs-content">

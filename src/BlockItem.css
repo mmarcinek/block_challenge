@@ -1,3 +1,12 @@
+.scroll-tab > div {
+  background-color: #fff !important;
+}
+
+.scroll-tab > div:hover {
+  background-color: #fff !important;
+  color: black;
+}
+
 .tabs-container {
   display: flex;
   font-family: 'Lato', sans-serif !important;
