@@ -27,7 +27,6 @@ class BlockItem extends Component{
   render(){
     return(
       <Tabs
-        tabItemContainerStyle={{display: 'flex', whiteSpace: 'wrap', height: 80 + 'px'}}
         value={this.state.value}
         onChange={this.handleChange = this.handleChange.bind(this)}
       >
