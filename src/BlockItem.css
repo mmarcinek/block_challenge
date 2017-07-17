@@ -1,15 +1,30 @@
+.scroll-tab {
+  height: inherit;
+}
+
 .scroll-tab > div {
   background-color: #fff !important;
 }
 
-.scroll-tab > div:hover {
-  background-color: #fff !important;
-  color: black;
+.scroll-tab > div > div > button {
+  background-color: #F5F5F5 !important;
+  border-bottom: 1px solid #ddd !important;
+}
+
+.scroll-tab > div > div > button > div > div > svg {
+  color: #F5F5F5 !important;
+}
+
+.scroll-tab > div:hover > div > button {
+  background-color: #747a7e !important;
+}
+
+.scroll-tab > div:hover > div > button > div > div > svg {
+  color: rgb(255,255,255);
 }
 
 .tabs-container {
   display: flex;
-
   border-radius: 0px !important;         
   border-bottom: 1px solid transparent !important;
   letter-spacing: .12em;
@@ -64,7 +79,10 @@
 }
 
 .content-image{
-  margin-top: 25px;
+  display: block;
+  margin: 25px auto;
   max-width: 100%;
+  max-height: 380px;
   height: auto;
+  cursor: zoom-in;
 }

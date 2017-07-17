@@ -24,17 +24,17 @@ class App extends Component {
         topic: 'Making it Real', 
         content: ["Gochujang kombucha mixtape heirloom fashion axe tofu. Ennui copper mug ethical hammock literally cloud bread, four dollar toast schlitz. Literally leggings live-edge neutra.  Shoreditch post-ironic fashion axe adaptogen aesthetic retro mlkshk echo park ennui. Snackwave lyft dreamcatcher, aesthetic activated charcoal vice lomo disrupt art party.",
         "This is my second paragraph on tab 3, which will automatically fit into the page."], 
-        url: 'https://media.giphy.com/media/l0HlFFTVOQz0bKYJG/giphy.gif'
+        url: 'http://payload201.cargocollective.com/1/11/363447/6328729/boomtown%202%20small.jpg'
       },
       { id: 4,
-        topic: 'Love the work', 
+        topic: 'Love the gifs', 
         content: "Gochujang kombucha mixtape heirloom fashion axe tofu. Ennui copper mug ethical hammock literally cloud bread, four dollar toast schlitz. Literally leggings live-edge neutra.  Shoreditch post-ironic fashion axe adaptogen aesthetic retro mlkshk echo park ennui. Snackwave lyft dreamcatcher, aesthetic activated charcoal vice lomo disrupt art party.", 
         url: ''
       },
       { id: 5,
         topic: 'Have Fun', 
         content: "Gochujang kombucha mixtape heirloom fashion axe tofu. Ennui copper mug ethical hammock literally cloud bread, four dollar toast schlitz. Literally leggings live-edge neutra.  Shoreditch post-ironic fashion axe adaptogen aesthetic retro mlkshk echo park ennui. Snackwave lyft dreamcatcher, aesthetic activated charcoal vice lomo disrupt art party.", 
-        url: ''
+        url: 'https://cdn.articulate.com/rise/courses/FtHG0DN2jjp0KHxN/q0r7xIVMCo4RkD5A.gif'
       }
     ]
 

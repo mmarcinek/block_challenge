@@ -24,6 +24,10 @@ class BlockItem extends Component{
     ) 
   }
 
+ zoomIn(){
+  console.log('zoom')
+  }
+  
   render(){
     return(
         <Tabs
@@ -37,7 +41,7 @@ class BlockItem extends Component{
              >
           <div className="tabs-content">
             {(Array.isArray(this.props.items[0].content) ? this.contentArray(this.props.items[0].content) : this.props.items[0].content)}      
-            <img className="content-image" src={this.props.items[0].url} alt=''/>
+            <img onClick={this.zoomIn} className="content-image" src={this.props.items[0].url} alt=''/>
           </div> 
         </Tab>
         <Tab className={"tabs-container" + (this.state.value === 1 ? ' tabs-active' : ' tabs-inactive')}
@@ -47,7 +51,7 @@ class BlockItem extends Component{
              >
           <div className="tabs-content">
             {(Array.isArray(this.props.items[1].content) ? this.contentArray(this.props.items[1].content) : this.props.items[1].content)}      
-            <img className="content-image" src={this.props.items[1].url} alt=''/>
+            <img onClick={this.zoomIn} className="content-image" src={this.props.items[1].url} alt=''/>
           </div> 
         </Tab>
         <Tab className={"tabs-container" + (this.state.value === 2 ? ' tabs-active' : ' tabs-inactive')}
@@ -57,7 +61,7 @@ class BlockItem extends Component{
              >
           <div className="tabs-content">
             {(Array.isArray(this.props.items[2].content) ? this.contentArray(this.props.items[2].content) : this.props.items[2].content)}      
-            <img className="content-image" src={this.props.items[2].url} alt=''/>
+            <img onClick={this.zoomIn} className="content-image" src={this.props.items[2].url} alt=''/>
           </div> 
         </Tab>
         <Tab className={"tabs-container" + (this.state.value === 3 ? ' tabs-active' : ' tabs-inactive')} 
@@ -67,7 +71,7 @@ class BlockItem extends Component{
              >
           <div className="tabs-content">
             {(Array.isArray(this.props.items[3].content) ? this.contentArray(this.props.items[3].content) : this.props.items[3].content)}      
-            <img className="content-image" src={this.props.items[3].url} alt=''/>
+            <img onClick={this.zoomIn} className="content-image" src={this.props.items[3].url} alt=''/>
           </div> 
         </Tab>
         <Tab className={"tabs-container" + (this.state.value === 4 ? ' tabs-active' : ' tabs-inactive')}
@@ -77,7 +81,7 @@ class BlockItem extends Component{
              >
           <div className="tabs-content">
             {(Array.isArray(this.props.items[4].content) ? this.contentArray(this.props.items[4].content) : this.props.items[4].content)}      
-            <img className="content-image" src={this.props.items[4].url} alt=''/>
+            <img onClick={this.zoomIn} className="content-image" src={this.props.items[4].url} alt=''/>
           </div> 
         </Tab>
       </Tabs>
