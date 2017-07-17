@@ -14,6 +14,9 @@
 .scroll-tab > div > div > div:first-child {
   border-bottom: 1px solid #ddd !important;
 }
+.scroll-tab > div > div > div:last-child {
+  border-bottom: 1px solid #ddd !important;  
+}
 
 .scroll-tab > div > div > button > div > div > svg {
   color: #F5F5F5 !important;
