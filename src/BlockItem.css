@@ -11,6 +11,10 @@
   border-bottom: 1px solid #ddd !important;
 }
 
+.scroll-tab > div > div > div:first-child {
+  border-bottom: 1px solid #ddd !important;
+}
+
 .scroll-tab > div > div > button > div > div > svg {
   color: #F5F5F5 !important;
 }
@@ -51,8 +55,12 @@
 }
 
 .tabs-container.tabs-active:first-child {
-  border-left: none !important;
+  border-left: 1px solid #ddd !important;
   border-right: 1px solid #ddd !important;  
+}
+
+.tabs-container.tabs-inactive:first-child{
+  border-left: 1px solid #ddd !important;
 }
 
 .tabs-container.tabs-inactive {
