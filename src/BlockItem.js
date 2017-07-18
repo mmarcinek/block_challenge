@@ -8,6 +8,7 @@ class BlockItem extends Component{
     this.state = {
       value: 0,
     };
+    this.goFullscreen = this.goFullscreen.bind(this);
   }
 
   handleChange(value){
@@ -23,6 +24,15 @@ class BlockItem extends Component{
       ))
     ) 
   }
+
+  goFullscreen(image) {
+    let element = this.refs[image];
+    if (element.mozRequestFullScreen) {
+      element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullScreen) {
+      element.webkitRequestFullScreen();
+   }
+  }
   
   render(){
     return(
@@ -37,7 +47,7 @@ class BlockItem extends Component{
              >
           <div className="tabs-content">
             {(Array.isArray(this.props.items[0].content) ? this.contentArray(this.props.items[0].content) : this.props.items[0].content)}      
-            <img className="content-image" src={this.props.items[0].url} alt=''/>
+            <img ref="image" onClick={() => this.goFullscreen("image")} className="content-image" src={this.props.items[0].url} alt=''/>
           </div> 
         </Tab>
         <Tab className={"tabs-container" + (this.state.value === 1 ? ' tabs-active' : ' tabs-inactive')}
@@ -47,7 +57,7 @@ class BlockItem extends Component{
              >
           <div className="tabs-content">
             {(Array.isArray(this.props.items[1].content) ? this.contentArray(this.props.items[1].content) : this.props.items[1].content)}      
-            <img className="content-image" src={this.props.items[1].url} alt=''/>
+            <img ref="image-1" onClick={() => this.goFullscreen("image-1")} className="content-image" src={this.props.items[1].url} alt=''/>
           </div> 
         </Tab>
         <Tab className={"tabs-container" + (this.state.value === 2 ? ' tabs-active' : ' tabs-inactive')}
@@ -57,7 +67,7 @@ class BlockItem extends Component{
              >
           <div className="tabs-content">
             {(Array.isArray(this.props.items[2].content) ? this.contentArray(this.props.items[2].content) : this.props.items[2].content)}      
-            <img className="content-image" src={this.props.items[2].url} alt=''/>
+            <img ref="image-2" onClick={() => this.goFullscreen("image-2")} className="content-image" src={this.props.items[2].url} alt=''/>
           </div> 
         </Tab>
         <Tab className={"tabs-container" + (this.state.value === 3 ? ' tabs-active' : ' tabs-inactive')} 
@@ -67,7 +77,7 @@ class BlockItem extends Component{
              >
           <div className="tabs-content">
             {(Array.isArray(this.props.items[3].content) ? this.contentArray(this.props.items[3].content) : this.props.items[3].content)}      
-            <img className="content-image" src={this.props.items[3].url} alt=''/>
+            <img ref="image-3" onClick={() => this.goFullscreen("image-3")} className="content-image" src={this.props.items[3].url} alt=''/>
           </div> 
         </Tab>
         <Tab className={"tabs-container" + (this.state.value === 4 ? ' tabs-active' : ' tabs-inactive')}
@@ -77,7 +87,7 @@ class BlockItem extends Component{
              >
           <div className="tabs-content">
             {(Array.isArray(this.props.items[4].content) ? this.contentArray(this.props.items[4].content) : this.props.items[4].content)}      
-            <img className="content-image" src={this.props.items[4].url} alt=''/>
+            <img ref="image-4" onClick={() => this.goFullscreen("image-4")} className="content-image" src={this.props.items[4].url} alt=''/>
           </div> 
         </Tab>
       </Tabs>

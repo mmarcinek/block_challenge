@@ -97,3 +97,12 @@
   height: auto;
   cursor: zoom-in;
 }
+
+.content-image:-webkit-full-screen {
+  width: auto%;
+  height: 100%;
+}
+.content-image:-moz-full-screen {
+  width: auto%;
+  height: 100%;
+}
