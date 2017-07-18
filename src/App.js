@@ -18,13 +18,13 @@ class App extends Component {
         content: ["Take a look at the branch called 'tabs' on this repo. Here, I tried to dynamically generate the tabs and content through a fun functional map, spoiler alert, it failed to render properly. I really want to figure out how to solve the problem I was encountering with this methodology and have a guess.",
         "To save time, I used npm to install material-ui for react, and well, by adding a <div> into the JSX render block, I am guessing the DOM node index is off for material-ui's tab mapping, so the flex container will not change direction to row and stacks vertically.",
         "I am going to try breaking down the Tabs components into smaller parts instead of mapping the Tabs as one component, this will not solve my issue with node indexes, but hopefully it will make the custom CSS required to hack material-ui a bit more sane.",
-        "Hopefully you like what you see, and we will have a chance to talk about it, I would love to hear from someone with React experience just what it is I am doing wrong. :)"
+        "Hopefully you like what you see, and we will have a chance to talk about it, I am really looking forward to hearing and appyling feedback from a more experienced React developer. :)"
         ], 
         url: ''
       },
       { id: 3,
         topic: 'Making it Real', 
-        content: ["So, yes, I love to write code! I find programming to be challenging, fun, and greatly rewarding!",
+        content: ["Yes, I love to write code! I find programming to be challenging, fun, and greatly rewarding!",
         "I am also a visual artist, and that is what I studied in college. I really love photography, film(as in motion pictures, and yes, I still shoot film for stills as well as digital!), and printmaking. I like objects that are reproducable, I guess that is why I like programming too.",
         "Most of my subject matter is related to the landscape and are serial documentary images. Here is an image from Boomtown, Pinedale Wyoming:"
         ], 
